@@ -3,3 +3,12 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 45vh;
+  width: 100vw;
+  align-items: center;
+  margin-top: 13px;
+}
