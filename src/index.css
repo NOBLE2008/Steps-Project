@@ -48,3 +48,14 @@ p{
   width: 100%;
   height: 30%;
 }
+
+.number{
+  background: linear-gradient(45deg, rgb(103, 7, 229), rgb(97, 5, 97));
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
