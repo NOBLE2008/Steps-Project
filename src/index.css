@@ -34,3 +34,10 @@ p{
   width: 100%;
   height: 30%;
 }
+
+.step{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+}
