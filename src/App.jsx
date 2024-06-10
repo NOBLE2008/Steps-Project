@@ -17,7 +17,6 @@ function App() {
       <div className="steps">
         <div className='numbers'>
           {steps.map((e, i) => {
-            console.log(page)
             return <Numbers page={page} step={e} key={i} index={i}/>
           })}
         </div>
