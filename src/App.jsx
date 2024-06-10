@@ -25,7 +25,11 @@ function App() {
           <button className='previous'>
             Previous
           </button>
-          <button className='next'>
+          <button className='next' onClick={() => {
+            page>= 1 ? setPage(() => {
+              return (page + 1)
+            }) : console.log('Page does not exist')
+          }}>
             Next
           </button>
         </div>
