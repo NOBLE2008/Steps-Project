@@ -3,7 +3,7 @@ import './index.css'
 
 function App() {
 
-  const active = useState(1)
+  const {page, setPage} = useState(1)
 
   return (
     <div className="container">
