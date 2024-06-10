@@ -16,6 +16,7 @@ function App() {
     <div className="container">
       <div className="steps">
         <div className='numbers'>
+          {<Numbers page={page} step={steps[page-1]}/>}
         </div>
         <div className="step">
           <p>Step 1: Press the windows button</p>
