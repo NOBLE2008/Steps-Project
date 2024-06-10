@@ -9,14 +9,17 @@ function App() {
   const steps = [
     `Step 1: Start Computer`,
     `Step 2: Open Ms Word`,
-    `Step 3: Click on Editor`,
+    `Step 3: Click on Editor`
   ]
 
   return (
     <div className="container">
       <div className="steps">
         <div className='numbers'>
-          {<Numbers page={page} step={steps[page-1]}/>}
+          {steps.map((e, i) => {
+            console.log(page)
+            return <Numbers page={page} step={e} key={i} index={i}/>
+          })}
         </div>
         <div className="step">
           <p>Step 1: Press the windows button</p>
