@@ -60,6 +60,10 @@ p{
   margin-top: 13px;
 }
 
+.active{
+  background: linear-gradient(45deg, rgb(103, 7, 229), rgb(97, 5, 97));
+}
+
 button{
   height: 35px;
   width: 75px;
