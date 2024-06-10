@@ -50,7 +50,7 @@ p{
 }
 
 .number{
-  background: linear-gradient(45deg, rgb(103, 7, 229), rgb(97, 5, 97));
+  background-color: gainsboro;
   border-radius: 50%;
   height: 35px;
   width: 35px;
