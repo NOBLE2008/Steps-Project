@@ -11,6 +11,16 @@ function App() {
     `Step 3: Click on Editor`,
   ];
 
+  const leftClickHandler = (e) => {
+    page >= 1
+      ? setPage(() => {
+          return page + 1;
+        })
+      : setPage(1)
+      console.log(page, steps.length)
+    page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
+  }
+
   return (
     <div className="container">
       <div className="steps">
@@ -27,15 +37,7 @@ function App() {
           <div className={`btnClass${page - 1 == steps.length - 1 ? " disabled" : ""}`}><button
             className='next'
             {...(page - 1 == steps.length - 1 ? " disabled" : "")}
-            onClick={(e) => {
-              page >= 1
-                ? setPage(() => {
-                    return page + 1;
-                  })
-                : setPage(1)
-                console.log(page, steps.length)
-              page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
-            }}
+            onClick={leftClickHandler}
           >
             Next
           </button></div>
