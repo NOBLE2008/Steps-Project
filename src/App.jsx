@@ -41,7 +41,7 @@ function App() {
           <p>{steps[page - 1]}</p>
         </div>
         <div className="buttons">
-          <button className={`previous${page - 1 == 0 ? " disabled" : ""}`} disabled={page - 1 == 0 ? true : false}>Previous</button>
+          <button className={`previous${page - 1 == 0 ? " disabled" : ""}`} disabled={page - 1 == 0 ? true : false} onClick={leftClickHandler}>Previous</button>
           <button
             className={`next${page - 1 == steps.length - 1 ? " disabled" : ""}`}
             disabled={page - 1 == steps.length - 1 ? true : false}
