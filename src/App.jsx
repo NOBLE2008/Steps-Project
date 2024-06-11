@@ -20,6 +20,15 @@ function App() {
       console.log(page, steps.length)
     page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
   }
+
+  const leftClickHandler = (e) => {
+    page >= 1
+      ? setPage(() => {
+          return page - 1;
+        })
+      : setPage(1)
+      console.log(page, steps.length)
+  }
   return (
     <div className="container">
       <div className="steps">
