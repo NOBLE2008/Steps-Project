@@ -75,3 +75,8 @@ button{
 button:hover{
   background: linear-gradient(45deg, rgb(97, 5, 97), rgb(103, 7, 229));
 }
+
+.disabled{
+  cursor: not-allowed;
+  background-color: blue;
+}
