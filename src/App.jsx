@@ -11,7 +11,7 @@ function App() {
     `Step 3: Click on Editor`,
   ];
 
-  const leftClickHandler = (e) => {
+  const rightClickHandler = (e) => {
     page >= 1
       ? setPage(() => {
           return page + 1;
@@ -20,7 +20,6 @@ function App() {
       console.log(page, steps.length)
     page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
   }
-
   return (
     <div className="container">
       <div className="steps">
@@ -33,11 +32,11 @@ function App() {
           <p>{steps[page - 1]}</p>
         </div>
         <div className="buttons">
-          <button className="previous">Previous</button>
+          <button className={`previous${page - 1 == 0 ? " disabled" : ""}`} disabled={page - 1 == 0 ? true : false}>Previous</button>
           <button
             className={`next${page - 1 == steps.length - 1 ? " disabled" : ""}`}
-            {...(page - 1 == steps.length - 1 ? " disabled" : "")}
-            onClick={leftClickHandler}
+            disabled={page - 1 == steps.length - 1 ? true : false}
+            onClick={rightClickHandler}
           >
             Next
           </button>
