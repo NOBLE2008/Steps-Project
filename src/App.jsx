@@ -35,7 +35,7 @@ function App() {
         <div className="buttons">
           <button className="previous">Previous</button>
           <div className={`btnClass${page - 1 == steps.length - 1 ? " disabled" : ""}`}><button
-            className='next'
+            className={`next${page == steps.length - 1 ? " disabled" : ""}`}
             {...(page - 1 == steps.length - 1 ? " disabled" : "")}
             onClick={leftClickHandler}
           >
