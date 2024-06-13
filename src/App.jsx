@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./index.css";
 import Numbers from "./components/Numbers";
+import Previous from "./components/Previous";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -21,14 +22,7 @@ function App() {
     page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
   }
 
-  const leftClickHandler = (e) => {
-    page >= 1
-      ? setPage(() => {
-          return page - 1;
-        })
-      : setPage(1)
-      console.log(page, steps.length)
-  }
+
   return (
     <div className="container">
       <div className="steps">
@@ -41,10 +35,9 @@ function App() {
           <p>{steps[page - 1]}</p>
         </div>
         <div className="buttons">
-          <button className={`previous${page - 1 == 0 ? " disabled" : ""}`} disabled={page - 1 == 0 ? true : false} onClick={leftClickHandler}>Previous</button>
           <button
-            className={`next${page - 1 == steps.length - 1 ? " disabled" : ""}`}
-            disabled={page - 1 == steps.length - 1 ? true : false}
+            className={`next${page - 1 >= steps.length - 1 ? " disabled" : ""}`}
+            disabled={page - 1 >= steps.length - 1 ? true : false}
             onClick={rightClickHandler}
           >
             Next
