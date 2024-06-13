@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./index.css";
 import Numbers from "./components/Numbers";
 import Previous from "./components/Previous";
+import Next from "./components/Next";
 
 function App() {
   const [page, setPage] = useState(1);
@@ -12,15 +13,6 @@ function App() {
     `Step 3: Click on Editor`,
   ];
 
-  const rightClickHandler = (e) => {
-    page >= 1
-      ? setPage(() => {
-          return page + 1;
-        })
-      : setPage(1)
-      console.log(page, steps.length)
-    page + 1 === steps.length ? e.target.setAttribute('disabled', 'true') : ''
-  }
 
 
   return (
@@ -36,13 +28,6 @@ function App() {
         </div>
         <div className="buttons">
           {<Previous page={page} setPage={setPage}/>}
-          <button
-            className={`next${page - 1 >= steps.length - 1 ? " disabled" : ""}`}
-            disabled={page - 1 >= steps.length - 1 ? true : false}
-            onClick={rightClickHandler}
-          >
-            Next
-          </button>
         </div>
       </div>
     </div>
