@@ -28,6 +28,7 @@ function App() {
         </div>
         <div className="buttons">
           {<Previous page={page} setPage={setPage}/>}
+          {<Next page={page} setPage={setPage} steps={steps}/>}
         </div>
       </div>
     </div>
