@@ -35,6 +35,7 @@ function App() {
           <p>{steps[page - 1]}</p>
         </div>
         <div className="buttons">
+          {<Previous page={page} setPage={setPage}/>}
           <button
             className={`next${page - 1 >= steps.length - 1 ? " disabled" : ""}`}
             disabled={page - 1 >= steps.length - 1 ? true : false}
